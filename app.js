@@ -10,8 +10,8 @@ function exibirTextoNaTela(tag, texto){
 }
 
 function textoInicial(){
-  exibirTextoNaTela("h1", "Jogo do Numero Secreto do Brayan")
-  exibirTextoNaTela("p", "Escolha um numero entre 1 e 100")
+  exibirTextoNaTela("h1", "Jogo do Numero Secreto do Brayan");
+  exibirTextoNaTela("p", "Escolha um numero entre 1 e 100");
 
 }
 textoInicial();
@@ -28,9 +28,9 @@ function verificarChute(){
     let chute = document.querySelector("input").value;
     if (chute == numeroAleatorio) {
       exibirTextoNaTela("h1", "voce acertou!");
-      let palavra_tentativas = (tentativas > 1 ? " tentativas" : " tentativa")
+      let palavra_tentativas = (tentativas > 1 ? " tentativas" : " tentativa");
       exibirTextoNaTela("p", "o numero secreto com " + tentativas + palavra_tentativas) ;
-      document.getElementById("reiniciar").removeAttribute("disabled")
+      document.getElementById("reiniciar").removeAttribute("disabled");
     } else {
         if ( chute > numeroAleatorio) {
           exibirTextoNaTela("p", "O numero secreto e menor");
@@ -55,8 +55,8 @@ function ReiniciarJG() {
     textoInicial();
     numeroAleatorio = GerarNumeroAleatorio();
     document.getElementById("reiniciar").setAttribute("disabled", true);
-    console.log(numeroAleatorio)
-    limpaCampo()
+    console.log(numeroAleatorio);
+    limpaCampo();
 
 }
     
